@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+ 
 <style>
 * {
   box-sizing: border-box;
@@ -84,6 +86,15 @@ div.counter {
         @-webkit-keyframes ketik{
             from { width: 0; }
         }
+ #Tulisan{
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 300px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
 </style>
 </head>
 <body 
@@ -122,5 +133,22 @@ Wish you all the best!!!
 <audio autoplay="true">
 <source src="music/hbd.mp3" type="audio/mpeg">
 </audio>
+<div id="Tulisan">
+
+    </div>
+
+<script type="text/javascript">
+  var i=0,Tulisan;
+  Tulisan = "Saya Suka Javascript , Jurnalcode.com"
+
+  function typing() {
+    if(i<Tulisan.length){
+      document.getElementById("Tulisan").innerHTML += Tulisan.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+  typing();
+</script>
 </body>
 </html>
